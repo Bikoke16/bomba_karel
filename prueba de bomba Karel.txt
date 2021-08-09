@@ -1,0 +1,73 @@
+class program {
+	void turnright()
+    {
+    turnleft();
+    turnleft();
+    turnleft();
+    }
+    
+    	void turn180()
+        {
+        turnleft();
+        turnleft();
+        }
+    
+    
+
+
+
+
+    program () {
+    
+    
+    	while(frontIsClear)
+        {
+        
+        	if(nextToABeeper)
+            {
+            pickbeeper();
+            }
+            
+        move();
+        }
+        
+        	while(!frontIsClear)
+            {
+            
+            pickbeeper();
+            turnleft();
+            move();
+            turnright();
+            move();
+            turnright();
+            move();
+            turnleft();
+            putbeeper();
+            
+            }
+            
+            turn180();
+    
+            while(!frontIsClear)
+            {
+                turnright();
+                move();
+                turnleft();
+                move();
+                turnleft();
+                move();
+                turnright();
+            }
+            
+         	while(frontIsClear)
+            {
+            move();
+            }
+           
+          
+            
+           
+        
+        turnoff();
+    }
+}
