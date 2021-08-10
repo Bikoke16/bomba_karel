@@ -1,0 +1,37 @@
+class program {
+
+	void  turnright()
+    {
+    turnleft();
+    turnleft();
+    turnleft();
+    }
+    program () {
+    	while(!nextToABeeper)
+        {
+        	if(rightIsClear)
+            {
+            	turnright();
+            	move();
+            }
+            else
+            {
+            	if(!frontIsClear)
+                {
+                	turnleft();
+                
+                }
+                else
+                {
+                	if(frontIsClear)
+                    {
+                    move();
+                    }
+                }
+            }
+            
+        }
+       
+        turnoff();
+    }
+}
