@@ -1,4 +1,4 @@
-class program {
+	class program {
 	void turnright()
     {
     turnleft();

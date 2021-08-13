@@ -1,0 +1,102 @@
+class program {
+
+void turnright()
+{
+	turnleft();
+    	turnleft();
+        	turnleft();
+}
+    program () {
+    
+    iterate(2)
+    {
+    	move();
+    }
+    turnright();
+    move();
+    
+   
+   iterate(2)
+    {
+    	move();
+        	pickbeeper();
+            	pickbeeper();
+    }
+    move();
+    move();
+    turnleft();
+    
+    while(frontIsClear)
+    {
+    	move();
+        if(!frontIsClear)
+        {
+        	pickbeeper();
+            	pickbeeper();
+        }
+    }
+    turnright();
+    move();
+    move();
+    turnright();
+    move();
+    pickbeeper();
+    pickbeeper();
+    
+    iterate(4)
+    {
+    	move();
+    }
+    turnright();
+    iterate(4)
+    {
+    	move();
+    }
+    pickbeeper();
+    pickbeeper();
+    
+    while(frontIsClear)
+    {
+    	move();
+        
+    }
+    turnleft();
+    move();
+    turnleft();
+    
+    
+    iterate(2)
+    {
+    	putbeeper();
+    }
+    move();
+    
+    iterate(2)
+    {
+    	putbeeper();
+    }
+    move();
+    
+    iterate(2)
+    {
+    	putbeeper();
+    }
+    move();
+    
+    iterate(2)
+    {
+    	putbeeper();
+    }
+    move();
+    
+    iterate(2)
+    {
+    	putbeeper();
+    }
+   
+       
+        turnoff();
+    }
+    
+   
+}

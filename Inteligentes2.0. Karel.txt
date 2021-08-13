@@ -1,0 +1,105 @@
+class program {
+
+    void turnright()
+    {
+      turnleft();
+      turnleft();
+      turnleft();
+
+    }
+    void turn180()
+    {
+    	turnleft();
+        turnleft();
+    }
+    void buscar()
+    {
+    while(frontIsClear)
+        {
+        	if(nextToABeeper)
+            {
+            	pickbeeper();
+                if(nextToABeeper)
+                {
+                	pickbeeper();
+                    
+                    
+				}
+                else
+                {
+                putbeeper();
+                }
+            }
+            
+        	move();
+        }
+        
+        
+        
+    }
+    void regresar()
+    {
+    	turn180();
+        while(frontIsClear)
+        {
+        	move();
+        }
+        if(leftIsClear)
+        {
+        	turnleft();
+            move();
+            turnleft();
+            
+        }
+    }
+    
+    void recorrerColumna()
+    {
+    	buscar();
+        regresar();
+    }
+    
+    void recorrerFila()
+    
+    {
+    	while(frontIsClear)
+        {
+          
+          recorrerColumna();
+        }
+        
+    }
+    void endGame()
+    {
+    	turn180();
+        while(frontIsClear)
+        {
+        	if(anyBeepersInBeeperBag)
+            {
+            	putbeeper();
+            	putbeeper();
+            }
+        
+            move();
+            
+        }
+    }
+    
+    
+    program ()
+    {
+    
+     
+
+      recorrerFila();
+      turnleft();
+      regresar();
+      endGame();
+
+        
+    
+    
+        
+        turnoff();
+    }
+}

@@ -1,0 +1,45 @@
+class program {
+
+void turnright()
+{
+	turnleft();
+    	turnleft();
+        	turnleft();
+}
+    program () {
+    
+    iterate(6)
+    {
+    	pickbeeper();
+    }
+    turnleft();
+    while(frontIsClear)
+    {
+    	move();
+        	if(!frontIsClear)
+            {
+            	iterate(3)
+                {
+                	putbeeper();
+                }
+            }
+    }
+    
+    turnright();
+    turnright();
+    
+    while(frontIsClear)
+    {
+    	move();
+        	if(!frontIsClear)
+            {
+            	iterate(3)
+                {
+                putbeeper();
+                }
+            }
+    }
+      
+       turnoff();
+    }
+}
